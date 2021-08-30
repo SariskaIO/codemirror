@@ -1,0 +1,12 @@
+{
+  "name": "codemirror",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "aws s3 cp . s3://test.sariska.io --recursive --acl public-read && aws cloudfront create-invalidation --distribution-id E2GEKJL3QWLD6E --paths / /bundle.js /index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
